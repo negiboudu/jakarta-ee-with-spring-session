@@ -20,10 +20,8 @@ import javax.inject.Named;
 @SessionScoped
 public class BackingBean implements Serializable {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 7647536123380321955L;
+
 	private String name;
 
     public BackingBean() {
