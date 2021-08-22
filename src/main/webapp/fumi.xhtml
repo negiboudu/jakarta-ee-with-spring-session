@@ -19,13 +19,19 @@
 	<title>fumidai</title>
 </h:head>
 <h:body>
+    <p style="background-color: yellow;">hello1</p>
 	<h:form prependid="false">
 	    <h:outputText value="#{index.backingBean.name}" />
-		<button type="button" onClick="submitPage();" value="button">nextpage</button>
+		<button type="button" onClick="submit1();" value="button">to hello1</button>
+		<button type="button" onClick="submit2();" value="button">to hello2</button>
 	</h:form>
 	<script type="text/JavaScript">
-		function submitPage() {
-			document.querySelector("form").action = "http://127.0.0.1:8100/hello1/response.xhtml";
+		function submit1() {
+			document.querySelector("form").action = "../hello1/response.xhtml";
+			document.querySelector("form").submit();
+		}
+		function submit2() {
+			document.querySelector("form").action = "../hello2/response.xhtml";
 			document.querySelector("form").submit();
 		}
 	</script>

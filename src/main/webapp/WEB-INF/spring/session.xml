@@ -9,9 +9,12 @@
 	<context:annotation-config />
 
 	<!-- for Redis -->
-	<!-- <bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration" 
-		p:saveMode="ALWAYS" /> <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" 
-		p:host-name="127.0.0.1" p:port="6379" /> -->
+	<bean
+		class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"
+		p:saveMode="ALWAYS" />
+	<bean id="jedisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+		p:host-name="localhost" p:port="6379" />
 
 	<!-- これを入れたら、Cookie内の「SESSION」が「JSESSIOINID」というnameに変わるが、元々存在していたJSESSIONIDも存在したままで、値が違っていておかしな感じになった。画面遷移後はCookieに何も入っていなかった。 
 		<bean class="org.springframework.session.web.http.DefaultCookieSerializer"> 
