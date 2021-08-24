@@ -13,19 +13,29 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>fumidai</title>
-    </h:head>
-    <h:body>
-    <h:form action="http://127.0.0.1:8080/hello1/response.xhtml">
-      <h:commandButton styleClass="button" value="fumi" />
-    </h:form>
-	<script>
-      document.querySelector('.button').click();
-    </script>
-    </h:body>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>fumidai</title>
+</h:head>
+<h:body>
+    <p style="background-color: yellow;">hello1</p>
+	<h:form prependid="false">
+	    <h:outputText value="#{index.backingBean.name}" />
+		<button type="button" onClick="submit1();" value="button">to hello1</button>
+		<button type="button" onClick="submit2();" value="button">to hello2</button>
+	</h:form>
+	<script type="text/JavaScript">
+		function submit1() {
+			document.querySelector("form").action = "../hello1/response.xhtml";
+			document.querySelector("form").submit();
+		}
+		function submit2() {
+			document.querySelector("form").action = "../hello2/response.xhtml";
+			document.querySelector("form").submit();
+		}
+	</script>
+</h:body>
+
 </html>
 

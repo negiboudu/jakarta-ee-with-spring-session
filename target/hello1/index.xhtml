@@ -22,19 +22,20 @@
       <title>Facelets Hello Greeting</title>
     </h:head>
     <h:body>
-        <f:event type="preRenderView" listener="#{hello.prerenderview}"/>
+        <f:event type="preRenderView" listener="#{index.prerenderview}"/>
+        <p style="background-color: yellow;">hello1</p>
         <h:form prependid="false">
             <h:graphicImage url="#{resource['images:duke.waving.gif']}" 
                             alt="Duke waving his hand"/>
             <h2>Hello, my name is Duke. What's yours?</h2>
             <h:inputText id="username"
                          title="My name is: "
-                         value="#{hello.backingBean.name}"
+                         value="#{index.backingBean.name}"
                          required="true"
                          requiredMessage="Error: A name is required."
                          maxlength="25" />
             <p></p>
-            <h:commandButton id="event01" value="event01" action="#{hello.event01}" />
+            <h:commandButton id="event01" value="event01" action="#{index.event01}" />
         </h:form>
         <div class="messagecolor">
             <h:messages showSummary="true" 
