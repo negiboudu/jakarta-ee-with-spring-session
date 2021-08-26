@@ -25,6 +25,7 @@ public class BackingBean implements Serializable {
 	private String name;
 
     public BackingBean() {
+    	System.out.println("BackingBean1 was Created.");
     }
 
     public String getName() {
