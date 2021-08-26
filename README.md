@@ -8,3 +8,6 @@ Prototype using JakartaEE + SpringSession(+Redis)
 
 # Dockerfile
 See [Wiki](https://github.com/negiboudu/jakarta-ee-with-spring-session/wiki/Dockerfile).
+
+# Memo(Japanese)
+https://thundering-nightshade-dae.notion.site/40dfce135fb54588b28d01e211eef3a3
